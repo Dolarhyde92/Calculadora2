@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculadora</title>
+    <script src="Calculadora.js"></script>
 </head>
-<body>
+<body onload="init()">
     <form id="calculadora">
         <table>
                 <input type="text" name="solucion" id="solucion" disabled>
         
             </tr>
             <tr>
-                <td><input type="button"  value="1" onClick="calculadora.solucion.value+='1'"></td>
-                <td><input type="button" value="2" onClick="calculadora.solucion.value+='2'"></td>
+                <td><input type="button" value="1" onClick="addToAcumulator(1)"></td>
+                <td><input type="button" value="2" onClick="addToAcumulator(2)"></td>
                 <td><input type="button" value="3" onClick="calculadora.solucion.value+='3'"></td>
-                <td><input type="button" value="+" onClick="calculadora.solucion.value+='+'"></td>
+                <td><input type="button" value="+" onClick="setOp('+')"></td>
             </tr>
             <tr>
                 <td><input type="button" value="4" onClick="calculadora.solucion.value+='4'"></td>
                 <td><input type="button" value="5" onClick="calculadora.solucion.value+='5'"></td>
                 <td><input type="button" value="6" onClick="calculadora.solucion.value+='6'"></td>
-                <td><input type="button" value="-" onClick="calculadora.solucion.value+='-'"></td>
+                <td><input type="button" value="-" onClick="setOp('-')"></td>
             
             </tr>
             <tr>
